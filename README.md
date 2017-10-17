@@ -81,35 +81,36 @@ ____________________________________________________
   // 0. OnMapReadyCallback 를 구현하거나, implements 를 하여 onMapReady() 를 Override 한다.
   public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-  private SupportMapFragment mapFragment;
+    private SupportMapFragment mapFragment;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_maps);
-      // 1. SupportMapFragment 를 사용하여 mapFragment 를 준비한다.
-      mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_maps);
+        // 1. SupportMapFragment 를 사용하여 mapFragment 를 준비한다.
+        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
 
-      // 2. Map 이 사용할 준비가 되었는지 비동기로 확인하는 작업
-      mapFragment.getMapAsync(MapsActivity.this);
-      // 사용할 준비가 되었으면
-      // 3. OnMapReadyCallback.onMapReady() 를 호출한다.
-  }
+        // 2. Map 이 사용할 준비가 되었는지 비동기로 확인하는 작업
+        mapFragment.getMapAsync(MapsActivity.this);
+        // 사용할 준비가 되었으면
+        // 3. OnMapReadyCallback.onMapReady() 를 호출한다.
+    }
 
-  @Override
-  public void onMapReady(GoogleMap googleMap) {
-      mMap = googleMap;
-      // 현재 지도에 중심점이 되는 좌표를 설정한다.
-      LatLng korea = new LatLng(37.524365, 126.977971);
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        // 현재 지도에 중심점이 되는 좌표를 설정한다.
+        LatLng korea = new LatLng(37.524365, 126.977971);
 
-      // 현재 지도에 Marker 를 출력한다.
-      // position : 좌표
-      // title : Marker 를 눌렀을 때 출력하는 Text
-      mMap.addMarker(new MarkerOptions().position(korea).title("KOREA"));
+        // 현재 지도에 Marker 를 출력한다.
+        // position : 좌표
+        // title : Marker 를 눌렀을 때 출력하는 Text
+        mMap.addMarker(new MarkerOptions().position(korea).title("KOREA"));
 
-      // 현재 지도에서의 Camera(View) 를 움직이는 메소드
-      // CameraUpdateFactory.newLatLngZoom(new LatLng(123, 123), 10) : 좌표와 ZOOM Level 을
-      mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(korea, 10));
+        // 현재 지도에서의 Camera(View) 를 움직이는 메소드
+        // CameraUpdateFactory.newLatLngZoom(new LatLng(123, 123), 10) : 좌표와 ZOOM Level 을
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(korea, 10));
+    }
   }
   ```
 

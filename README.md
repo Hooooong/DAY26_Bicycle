@@ -1,9 +1,9 @@
-# Bicycle 예제
+# Google Map( JSON Data 사용 )
 
 ### 설명
 ____________________________________________________
 
-![Bicycle]()
+![Bicycle](https://github.com/Hooooong/DAY26_Bicycle/blob/master/image/Bicycle.gif)
 
 - JSON Parsing 예제 ( 서울시 공공데이터 사용 )
 - Google Map 을 사용하여 Marker 출력하기
@@ -15,7 +15,7 @@ ____________________________________________________
 
   - JSON 데이터를 Parsing 하기 위해서는 변수 명이 JSON 데이터 이름과 동일해야 한다.
 
-  ```jsonString
+  ```json
   [
     {
     "id":1,

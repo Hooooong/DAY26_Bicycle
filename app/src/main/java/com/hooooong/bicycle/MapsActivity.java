@@ -22,7 +22,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     // 좌표 데이터를 저장하기 위한 저장소
     private List<Row> rowList;
-    private  SupportMapFragment mapFragment;
+    private SupportMapFragment mapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void load() {
-        new AsyncTask<Void, Void, String>(){
+        new AsyncTask<Void, Void, String>() {
 
             @Override
             protected void onPreExecute() {
@@ -66,7 +66,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
         // Add a marker in Sydney and move the camera
         LatLng korea = new LatLng(37.524365, 126.977971);
-        for(int i = 0 ; i<rowList.size(); i++){
+        for (int i = 0; i < rowList.size(); i++) {
             Row row = rowList.get(i);
             LatLng sit = new LatLng(Double.parseDouble(row.getLAT()), Double.parseDouble(row.getLNG()));
             mMap.addMarker(new MarkerOptions().position(sit).title(row.getCLASS()));

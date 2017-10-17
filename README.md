@@ -53,9 +53,9 @@ ____________________________________________________
 
   - 참조 : [JSON](https://github.com/Hooooong/DAY25_JSONData), [서울 열린데이터 광장](http://data.seoul.go.kr/index.jsp)
 
-- Google Mapping
+- Google Map 사용
 
-  - google map api 를 사용하여 지도를 보여줄 수 있다.
+  - google map API 를 사용하여 지도를 보여줄 수 있다.
 
   - [Google API](https://console.developers.google.com) 에서 api key 를 발급받아 사용한다.
 
@@ -75,7 +75,7 @@ ____________________________________________________
       tools:context="com.hooooong.bicycle.MapsActivity" />
   ```
 
-  - MainActivity 설정
+  - java 설정
 
   ```java
   // 0. OnMapReadyCallback 를 구현하거나, implements 를 하여 onMapReady() 를 Override 한다.

@@ -49,7 +49,7 @@ ____________________________________________________
   }
   ```
 
-  - Json 형식을 POJO Class로 변환하는 Web Site : [sodhanalibrary](http://pojo.sodhanalibrary.com/)
+  - Json 형식을 POJO Class로 변환해주는 Web Site : [sodhanalibrary](http://pojo.sodhanalibrary.com/)
 
   - 참조 : [JSON](https://github.com/Hooooong/DAY25_JSONData), [서울 열린데이터 광장](http://data.seoul.go.kr/index.jsp)
 
